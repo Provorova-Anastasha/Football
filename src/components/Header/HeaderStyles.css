@@ -1,0 +1,44 @@
+.header {	padding: 5px 60px;
+    background: #2a9932;
+    color:black;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerMain {
+    display: flex;
+    gap: 100px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    
+}
+.iconlink {
+    width: 90px;
+    height: 90px;
+}
+
+.form {
+    margin-top: 10px;
+    
+  	}
+    
+.poisk {
+    width: 30%;
+    height: 30px;
+    background:#c2fdc5;
+    border: 2px solid #016d1a;
+    border-radius: 50px;
+    }
+.submit {
+    width: 70px;
+    height: 30px;
+    color: black;
+    background:#aef8b2;
+    border: 2px solid #016d1a;
+    border-radius: 50px;
+}

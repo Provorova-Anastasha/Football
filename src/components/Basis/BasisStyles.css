@@ -1,0 +1,22 @@
+  .ligi {
+    text-align: center;
+    text-decoration: none;
+      }
+  .ligiHight {
+    padding: 50px 100px;
+    display: flex;
+    gap: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+      }
+.ligis {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+    padding: 20px 50px;
+   }
+.link {
+    width: 250px;
+    height: 280px;
+}
