@@ -1,21 +1,19 @@
 import React from 'react';
-import Header from './components/Header';
-import Basis from './components/Basis';
-import PaginationBloc from './components/PaginationBloc/PaginationBloc';
-import Footer from './components/Footer';
-import './App.css';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import League from './pages/League';
+import ErrorPage from './pages/ErrorPage';
+import './index.css';
 
 
 
 function App() {
-  return (
-    <React.Fragment>
-      <Header />
-      <Basis />
-      <PaginationBloc />
-      <Footer />
-    </React.Fragment>
-    
-  );
+  const router = createBrowserRouter ([
+        {
+          path: '/',
+          element: <League />,
+          errorElement: <ErrorPage />
+        }
+   ]);
+   return <RouterProvider router={router} />;
 }
 export default App;

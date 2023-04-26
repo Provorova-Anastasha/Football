@@ -23,8 +23,8 @@ const Header = () => {
 		<input 
         type='text' 
         name='text'
-        className='poisk'
-        placeholder='Поиск here!'
+        className='search'
+        placeholder='Search here!'
         />
 		<input type='submit' name='submit' className='submit' value='Поиск' />
    </form>	
