@@ -11,6 +11,18 @@
     flex-wrap: nowrap;
     align-items: center;
 }
+.ligaButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.temButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .logo {
     width: 150px;
     height: 150px;
