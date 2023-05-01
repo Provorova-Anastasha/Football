@@ -1,14 +1,15 @@
 import React from 'react';
 import Header from '../components/Header';
-import Basis from '../components/Basis';
+import LeagueCentre from '../components/LeagueCentre';
 import PaginationBloc from '../components/PaginationBloc/PaginationBloc';
 import Footer from '../components/Footer';
+
 
 const League = () => {
     return (
     <React.Fragment>
       <Header />
-      <Basis />
+      <LeagueCentre />
       <PaginationBloc />
       <Footer />
     </React.Fragment>

@@ -1,4 +1,18 @@
-  .ligi {
+.Competitions{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 30px;
+  width: 70%;
+  margin: auto;
+  
+
+}
+ 
+ 
+ /* .ligi {
     text-align: center;
     text-decoration: none;
       }
@@ -19,4 +33,4 @@
 .link {
     width: 250px;
     height: 280px;
-}
+} */

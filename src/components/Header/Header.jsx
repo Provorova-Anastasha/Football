@@ -1,5 +1,6 @@
 import React from 'react';
 import './HeaderStyles.css';
+import {Link} from 'react-router-dom'
 
 const Header = () => {
     return (
@@ -8,16 +9,16 @@ const Header = () => {
         <div className = 'img'>
             <img src='./icons/logo.jpg' alt='Наш логотип' className='logo'/>
         </div>
-		<a href="/" className="liga-button">
+		<Link to="/" className="liga-button">
             <img src="./icons/ligi.png" alt='Лиги' className='iconlink'/>
             <br/>
             Лиги
-            </a>
-		<a href="/" className='tem-button'>
+            </Link> 
+		<Link to="/teams" className='tem-button'>
             <img src="./icons/team.png" alt='Команды' className='iconlink'/>
             <br/>
             Команды
-            </a>
+            </Link>
             </div>
 <form className='form'>
 		<input 

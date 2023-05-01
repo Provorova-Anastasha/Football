@@ -1,14 +1,17 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
+import TeamsCentre from '../components/TeamsCentre';
 import PaginationBloc from '../components/PaginationBloc';
-import Basis from '../components/Basis';
+import Footer from '../components/Footer';
+
+
+
 
 const Teams = () => {
     return (
     <React.Fragment>
       <Header />
-      <Basis />
+      <TeamsCentre />
       <PaginationBloc />
       <Footer />
     </React.Fragment>
