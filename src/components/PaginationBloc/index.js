@@ -1,2 +1,2 @@
 import PaginationBloc from "./PaginationBloc";
-export default PaginationBloc
+export default PaginationBloc;

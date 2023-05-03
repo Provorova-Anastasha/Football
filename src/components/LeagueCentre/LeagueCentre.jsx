@@ -17,25 +17,25 @@ const LeagueCentre = () => {
         const allLigs = await apiCreate.get();
         setLigs(allLigs.data.competitions);
       } catch (error) {
-        console.log(error);
+        console.error();
       }
     }
     fetchAllLigs();
   }, []);
   return ligs?.length ? (
     <div className='Competitions'>
-      {ligs.map((liga) => {
+      {ligs.map(({id,name,area}) => {
         return (
           <CardCompetitions
-            key={liga.id}
-            name={liga.name}
-            area={liga.area.name}
+            key={id}
+            name={name}
+            area={area.name}
           />
         );
       })}
     </div>
   ) : (
-    <p style={{ color: 'black' }}>Loading...</p>
+    <p className = "loading">Loading...</p>
   );
 }
     export default LeagueCentre;

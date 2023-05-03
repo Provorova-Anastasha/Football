@@ -9,15 +9,13 @@ const Header = () => {
         <div className = 'img'>
             <img src='./icons/logo.jpg' alt='Наш логотип' className='logo'/>
         </div>
-		<Link to="/" className="liga-button">
+		<Link to="/" className="ligaButton">
             <img src="./icons/ligi.png" alt='Лиги' className='iconlink'/>
-            <br/>
-            Лиги
+            <p>Лиги</p>
             </Link> 
-		<Link to="/teams" className='tem-button'>
+		<Link to="/teams" className='temButton'>
             <img src="./icons/team.png" alt='Команды' className='iconlink'/>
-            <br/>
-            Команды
+            <p>Команды</p>
             </Link>
             </div>
 <form className='form'>
