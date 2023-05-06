@@ -11,7 +11,12 @@
     justify-content: center;
     margin-top: 50px;
     background: #2a9932;
-
 }
 .Cardteams:hover{background-color: #b0f799;}
-.team {font-size: 30px;}
+.cardTitle {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.CardTeamsButton {
+    text-decoration: none;
+}
