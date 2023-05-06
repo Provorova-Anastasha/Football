@@ -1,4 +1,4 @@
-.Cardcompetitions {
+.cardcompetitions {
     width: 300px;
     height: 150px;
     color: #b0f799;
@@ -12,7 +12,7 @@
     background: #2a9932;
 
 }
-.Cardcompetitions:hover{background-color: #b0f799;}
+.cardcompetitions:hover{background-color: #b0f799;}
 .cards {font-size: 30px;}
 .CardCompetitionsButton {
     text-decoration: none;

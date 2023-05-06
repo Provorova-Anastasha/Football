@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const CardCompetitions = ({ name, area }) => {
   return (
-    <div className='Cardcompetitions'>
+    <div className='cardcompetitions'>
       <Link to  ='/' className="CardCompetitionsButton">
       <h1 className='cards'>{name}</h1>
       <h2 className='cards'>{area}</h2>
