@@ -9,7 +9,7 @@ import './index.css';
 
 function App() {
   const router = createBrowserRouter ([
-        {
+       {
           path: '/',
           element: <League />,
           errorElement: <ErrorPage />

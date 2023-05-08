@@ -1,0 +1,27 @@
+.pagination {
+    display: flex;
+    margin: 40px;
+    justify-content: center;
+    margin-top: 100px;
+    }
+  .ant-pagination {
+      background-color: #2a9932;
+      padding: 5px;
+  }
+  .ant-pagination .ant-pagination-item a {
+    color: #fff;
+  }
+  .ant-pagination .ant-pagination-item a:hover {
+    color: black;
+    }
+  .ant-pagination .ant-pagination-item-active {
+    background-color: rgb(39,90,29);
+    border-color:black;
+     }
+  .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: rgb(39,90,29); 
+    border-color:black;
+  }
+  .loading {
+    color: black;
+  }
