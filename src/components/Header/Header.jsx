@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import './HeaderStyles.css';
 import {Link} from 'react-router-dom'
 
@@ -18,15 +18,6 @@ const Header = () => {
             <p>Команды</p>
             </Link>
             </div>
-<form className='form'>
-		<input 
-        type='text' 
-        name='text'
-        className='search'
-        placeholder='Search here!'
-        />
-		<input type='submit' name='submit' className='submit' value='Поиск' />
-   </form>	
     
 </div>
     );
