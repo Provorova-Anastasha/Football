@@ -25,3 +25,28 @@
   .loading {
     color: black;
   }
+  .search {
+    width: 30%;
+    height: 30px;
+    color: black;
+    background:#c2fdc5;
+    border: 2px solid #016d1a;
+    border-radius: 50px;
+    }
+    .quest {
+      width: 70px;
+      height: 30px;
+      color: #00360d;
+      background:#aef8b2;
+      border: 2px solid #016d1a;
+      border-radius: 50px;
+  }
+  .lose {
+      width: 70px;
+      height: 30px;
+      color: #00360d;
+      background:#aef8b2;
+      border: 2px solid #016d1a;
+      border-radius: 50px;
+  
+  }
