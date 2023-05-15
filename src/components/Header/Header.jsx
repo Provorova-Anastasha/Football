@@ -18,7 +18,6 @@ const Header = () => {
             <p>Команды</p>
             </Link>
             </div>
-    
 </div>
     );
 };
