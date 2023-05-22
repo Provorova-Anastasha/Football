@@ -10,10 +10,32 @@
     justify-content: center;
     margin-top: 50px;
     background: #2a9932;
-
 }
+@media (max-width:1367px) {
+    .cardcompetitions {
+        width: 260px;
+        height: 140px;
+      }
+}
+@media (max-width:415px) {
+    .cardcompetitions {
+        width: 220px;
+        height: 120px;
+      }
+    }
 .cardcompetitions:hover{background-color: #b0f799;}
 .cards {font-size: 30px;}
+@media (max-width:1367px) {
+    .cards {
+    font-size: 23px;
+      }
+}
+@media (max-width:415px) {
+    .cards {
+    margin-bottom: 5px;
+    font-size: 20px;
+      }
+    }
 .CardCompetitionsButton {
     text-decoration: none;
 }

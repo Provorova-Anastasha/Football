@@ -10,13 +10,16 @@ const MAX_TEAMSCENTRE_PER_PAGE = 6;
 
 const Teams = () => {
   const [teams, setTeams] = useState([]);
+  const [filteredTeams, setFilteredTeams] = useState([]);
   const [page, setPage] = useState(1);
+  const [searchValue, setSearchValue] = useState("");
 
     useEffect(() => {
       async function fetchAllTeams() {
         try {
           const allTeams = await apiCreate.get('/teams');
           setTeams(allTeams.data.teams);
+          setFilteredTeams(allTeams.data.teams);
           } catch (error) {
           console.error();
         }
@@ -25,14 +28,55 @@ const Teams = () => {
     }, []);
 
     const getTeams = () =>
-    teams.slice(
+    filteredTeams.slice(
       MAX_TEAMSCENTRE_PER_PAGE * page - MAX_TEAMSCENTRE_PER_PAGE,
       MAX_TEAMSCENTRE_PER_PAGE * (page -1) + MAX_TEAMSCENTRE_PER_PAGE
     );
+    const searchTeams = () => {
+      if (!searchValue) {
+        setFilteredTeams(teams);
+        return;
+      }
+
+      const filteredTeamsByName = teams.filter((team) =>
+      team.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
+    );
+
+  
+  setFilteredTeams(filteredTeamsByName);
+  };
+  const resetSearch = () => {
+    setFilteredTeams(teams);
+    setSearchValue("");
+  };
        return (
-    <React.Fragment>
+<div className="TeamsPages">
       <Header />
-      {teams?.length ? (
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          searchTeams();
+        }}
+      >
+    <div className='form'>
+      <input 
+          className='search'
+          placeholder="Поиск..."
+          value={searchValue}
+          onChange={(event) => setSearchValue(event.target.value)}
+          />
+      <button type='submit' 
+         className='quest'>
+          Поиск
+          </button>
+      <button className='lose' onClick={resetSearch}>
+          Cбросить
+         </button>
+    </div>
+     </form>
+      {!filteredTeams.length && teams.length ? (
+        <p style={{ color: "white" }}>Ничего не найдено</p>
+        ) : teams.length ? (
         <Fragment>
       <TeamsCentre teams={getTeams()}/>
       <div className="pagination">
@@ -41,15 +85,15 @@ const Teams = () => {
            onChange={(page) => setPage(page)}
            pageSize={MAX_TEAMSCENTRE_PER_PAGE}
            showSizeChanger={false}
-           total={teams.length} />;
+           total={teams.length} />
             </div>
-        </Fragment>
+            <Footer />
+            </Fragment>
       )
       :(<p className = "loading">Loading...</p>
       )}
-      <Footer />
-    </React.Fragment>
-    )
+</div>
+     )
 }
 export default Teams;
 
