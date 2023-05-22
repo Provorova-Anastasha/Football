@@ -85,7 +85,7 @@ const Teams = () => {
            onChange={(page) => setPage(page)}
            pageSize={MAX_TEAMSCENTRE_PER_PAGE}
            showSizeChanger={false}
-           total={teams.length} />;
+           total={teams.length} />
             </div>
             <Footer />
             </Fragment>

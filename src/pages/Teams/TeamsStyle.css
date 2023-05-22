@@ -4,10 +4,23 @@
     justify-content: center;
     margin-top: 100px;
     }
+    @media (max-width:415px) {
+      .pagination {
+        margin-top: 50px;
+        
+        }
+      }
+
   .ant-pagination {
       background-color: #2a9932;
       padding: 5px;
   }
+  @media (max-width:415px) {
+    .ant-pagination {
+      font-size: 13px;
+      }
+    }
+  
   .ant-pagination .ant-pagination-item a {
     color: #fff;
   }
@@ -25,6 +38,15 @@
   .loading {
     color: black;
   }
+  .form {
+    margin-top: 10px;
+  	}
+  @media (max-width:415px) {
+      .form {
+        margin-top: 25px;
+        }
+        }
+
   .search {
     width: 30%;
     height: 30px;
@@ -33,13 +55,28 @@
     border: 2px solid #016d1a;
     border-radius: 50px;
     }
-    .quest {
+    @media (max-width:415px) {
+      .search {
+        width: 70%;
+        height: 25px;
+        border: 1px solid #016d1a;
+        border-radius: 10px;}
+          }
+  .quest {
       width: 70px;
       height: 30px;
       color: #00360d;
       background:#aef8b2;
       border: 2px solid #016d1a;
       border-radius: 50px;
+  }
+  @media (max-width:415px) {
+    .quest {
+      width: 60px;
+      height: 25px;
+      border: 1px solid #016d1a;
+      border-radius: 10px;
+  }
   }
   .lose {
       width: 70px;
@@ -49,4 +86,12 @@
       border: 2px solid #016d1a;
       border-radius: 50px;
   
+  }
+  @media (max-width:415px) {
+    .lose {
+      width: 60px;
+      height: 25px;
+      border: 1px solid #016d1a;
+      border-radius: 10px;
+  }
   }

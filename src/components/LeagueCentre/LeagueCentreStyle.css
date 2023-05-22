@@ -10,6 +10,13 @@
   
 
 }
+@media (max-width:415px) {
+  .competitions {
+  display: flex;
+  flex-direction: column;
+ gap: 10px
+    }
+      }
 .loading {
   color: black;
 }

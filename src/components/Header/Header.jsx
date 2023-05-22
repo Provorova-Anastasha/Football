@@ -11,11 +11,11 @@ const Header = () => {
         </div>
 		<Link to="/" className="ligaButton">
             <img src="./icons/ligi.png" alt='Лиги' className='iconlink'/>
-            <p>Лиги</p>
+            <p className='text'>Лиги</p>
             </Link> 
 		<Link to="/teams" className='temButton'>
             <img src="./icons/team.png" alt='Команды' className='iconlink'/>
-            <p>Команды</p>
+            <p className='text'>Команды</p>
             </Link>
             </div>
 </div>
