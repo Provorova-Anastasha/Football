@@ -5,7 +5,7 @@ import LeagueCentre from '../../components/LeagueCentre';
 import Footer from '../../components/Footer';
 import { apiCreate } from '../../api/api';
 import './League.css';
-import Loader from '../../components/Loader/Loader';
+
 
 
 
@@ -69,6 +69,24 @@ const resetSearch = () => {
     setSearchValue("");
   };
 
+  const allMainLig = () => {
+    return ligs.length ? (
+      <Fragment>
+        <LeagueCentre ligs={getCompetitions()}/>
+        <div className="pagination">
+         <Pagination  
+         current={page}
+         onChange={(page) => setPage(page)}
+         pageSize={MAX_LEAGUECENTRE_PER_PAGE}
+         showSizeChanger={false}
+         total={filteredLigs?.length} />;
+          </div>
+         <Footer />
+      </Fragment>
+    )
+    :(<p className = "loading">Loading...</p>
+    )
+  }
     return (
     <div className="LeaguePages">
     <Header />
@@ -94,24 +112,11 @@ const resetSearch = () => {
           </button>
         </div>
    </form>
+
+   
    {!filteredLigs.length && ligs.length ? (
         <p style={{ color: "white" }}>Ничего не найдено</p>
-      ) : ligs.length ? (
-        <Fragment>
-          <LeagueCentre ligs={getCompetitions()}/>
-          <div className="pagination">
-           <Pagination  
-           current={page}
-           onChange={(page) => setPage(page)}
-           pageSize={MAX_LEAGUECENTRE_PER_PAGE}
-           showSizeChanger={false}
-           total={filteredLigs?.length} />
-            </div>
-           <Footer />
-        </Fragment>
-      )
-      :(<Loader />
-      )}
+      ) : (allMainLig())}
       </div>
     )
 }
