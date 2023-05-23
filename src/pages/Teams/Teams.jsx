@@ -5,6 +5,7 @@ import Footer from '../../components/Footer';
 import { apiCreate } from '../../api/api';
 import {Pagination} from 'antd';
 import './TeamsStyle.css';
+import Loader from '../../components/Loader/Loader';
 
 const MAX_TEAMSCENTRE_PER_PAGE = 6;
 
@@ -90,7 +91,7 @@ const Teams = () => {
             <Footer />
             </Fragment>
       )
-      :(<p className = "loading">Loading...</p>
+      :( <Loader />
       )}
 </div>
      )

@@ -1,0 +1,73 @@
+.loaderWrap {
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 150px;
+  height: 150px;
+  display: block;
+  overflow: hidden;
+  margin: 75px auto;
+  position: relative;
+}
+
+.loader div {
+  height: 100%;
+}
+
+.loaderItem,
+.loaderItem div {
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  animation: rotate linear 3.5s infinite;
+  border-bottom-color: white;
+  border-top-color: white;
+}
+
+div:hover {
+  animation-play-state: paused;
+}
+
+.loader,
+.loader * {
+  will-change: transform;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: white;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-top-color: white;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top-color: #990000;
+  }
+}
+
+.selector1 {
+  animation: rotate 2s linear infinite;
+}
+
+.selector2 {
+  animation: rotate2 2s linear infinite;
+}

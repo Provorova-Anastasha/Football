@@ -5,6 +5,7 @@ import LeagueCentre from '../../components/LeagueCentre';
 import Footer from '../../components/Footer';
 import { apiCreate } from '../../api/api';
 import './League.css';
+import Loader from '../../components/Loader/Loader';
 
 
 
@@ -104,12 +105,12 @@ const resetSearch = () => {
            onChange={(page) => setPage(page)}
            pageSize={MAX_LEAGUECENTRE_PER_PAGE}
            showSizeChanger={false}
-           total={filteredLigs?.length} />;
+           total={filteredLigs?.length} />
             </div>
            <Footer />
         </Fragment>
       )
-      :(<p className = "loading">Loading...</p>
+      :(<Loader />
       )}
       </div>
     )
