@@ -8,6 +8,7 @@ const TeamsCentre = ({teams}) => {
           {teams.map(team => (
          <CardTeams
                 key={team.id}
+                id={team.id}
                 name={team.name}
                 crestUrl={team.crestUrl}
               />

@@ -7,14 +7,14 @@ const Header = () => {
         <div className='header'>
             <div className='headerMain'>
         <div className = 'img'>
-            <img src='./icons/logo.jpg' alt='Наш логотип' className='logo'/>
+            <img src='/icons/logo.jpg' alt='Наш логотип' className='logo'/>
         </div>
 		<Link to="/" className="ligaButton">
-            <img src="./icons/ligi.png" alt='Лиги' className='iconlink'/>
+            <img src="/icons/ligi.png" alt='Лиги' className='iconlink'/>
             <p className='text'>Лиги</p>
             </Link> 
 		<Link to="/teams" className='temButton'>
-            <img src="./icons/team.png" alt='Команды' className='iconlink'/>
+            <img src="/icons/team.png" alt='Команды' className='iconlink'/>
             <p className='text'>Команды</p>
             </Link>
             </div>
