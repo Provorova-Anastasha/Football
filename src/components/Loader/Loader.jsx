@@ -1,5 +1,3 @@
-
-
 import  "./LoaderStyle.css";
 
 const Loader = () => {

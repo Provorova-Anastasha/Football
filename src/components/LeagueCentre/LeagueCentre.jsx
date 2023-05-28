@@ -8,6 +8,7 @@ const LeagueCentre = ({ligs}) => {
     <div className='competitions'>
       {ligs.map(liga=>(
         <CardCompetitions
+        id={liga.id}
         key={liga.id}
         name={liga.name}
         area={liga.area.name}

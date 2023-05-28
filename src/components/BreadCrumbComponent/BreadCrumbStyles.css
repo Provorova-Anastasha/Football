@@ -1,0 +1,11 @@
+.breadcrumbWrap {
+    font-size: 25px;
+  }
+  
+  .breadcrumbWrapText {
+    color: white;
+  }
+  
+  .ant-breadcrumb .ant-breadcrumb-separator {
+    color: white;
+  }
