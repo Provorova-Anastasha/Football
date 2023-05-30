@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import './BreadCrumbStyles.css';
 
-const BreadCrumbComponent = () => {
+const BreadCrumbComponent = ({ apiEndpoint, title }) => {
   const [nameTeam, setNameTeam] = useState([]);
 
   const { id } = useParams();
@@ -14,14 +14,14 @@ const BreadCrumbComponent = () => {
   useEffect(() => {
     async function fetchMatches() {
       try {
-        const nameTeam = await apiCreate.get(`/competitions/${id}`);
+        const nameTeam = await apiCreate.get(`/${apiEndpoint}/${id}`);
         setNameTeam(nameTeam.data.name);
       } catch (error) {
-        console.error();
+        console.error(error);
       }
     }
     fetchMatches();
-  }, [id]);
+  }, [apiEndpoint,id]);
 
   return (
     <Breadcrumb
@@ -31,8 +31,8 @@ const BreadCrumbComponent = () => {
       items={[
         {
           title: (
-            <Link to="/competitions">
-              <p className="breadcrumbWrapText"> Команды</p>
+            <Link to= {`/${apiEndpoint}`}>
+              <p className="breadcrumbWrapText">{title}</p>
             </Link>
           ),
         },

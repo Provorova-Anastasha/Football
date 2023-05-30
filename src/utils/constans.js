@@ -1,0 +1,2 @@
+export const MAX_LEAGUECENTRE_PER_PAGE = 6;
+export const MAX_TEAMSCENTRE_PER_PAGE = 6;

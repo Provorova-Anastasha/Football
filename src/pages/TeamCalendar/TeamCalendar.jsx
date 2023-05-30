@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { apiCreate } from "../../api/api";
 import Header from "../../components/Header";
-import TeamTable from "../../components/TeamTable";
+import MatchTable from "../../components/MatchTable/MatchTable";
 import Footer from "../../components/Footer";
-import BreadCrumbComponent from "../../components/BreadCrumpComponent";
+import BreadCrumbComponent from "../../components/BreadCrumbComponent"
 
 import "./TeamCalendarStyle.css";
 
+
 const TeamCalendar = () => {
   const [matchesTeams, setMatchesTeams] = useState([]);
+  const [errorMessages, setErrorMessages] = useState(null)
 
   const { id } = useParams();
 
@@ -19,20 +21,21 @@ const TeamCalendar = () => {
         const matches = await apiCreate.get(`/teams/${id}/matches`);
         setMatchesTeams(matches.data.matches);
       } catch (error) {
-        console.error();
+        setErrorMessages(error) 
+        console.error(error);
       }
     }
     fetchMatches();
   }, [id]);
 
   return (
-    <React.Fragment>
+    <>
       <Header />
-      <BreadCrumbComponent />
+      <BreadCrumbComponent apiEndpoint="teams" title="Команды" />
       <p className="textMatches">Матчи</p>
-      <TeamTable matchesTeams={matchesTeams} />
+      <MatchTable matches={matchesTeams} errorMessages={errorMessages}/>
       <Footer />
-    </React.Fragment>
+    </>
   );
 };
 export default TeamCalendar;

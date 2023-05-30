@@ -5,11 +5,11 @@ import LeagueCentre from '../../components/LeagueCentre';
 import Footer from '../../components/Footer';
 import { apiCreate } from '../../api/api';
 import './League.css';
+import {MAX_LEAGUECENTRE_PER_PAGE} from "../../utils/constans"
+import {filterByField} from "../../utils/utils"
 
 
 
-
-const MAX_LEAGUECENTRE_PER_PAGE = 6;
 
 const League = () => {
   const [ligs, setLigs] = useState([]);
@@ -24,7 +24,7 @@ const League = () => {
         setLigs(allLigs.data.competitions);
         setFilteredLigs(allLigs.data.competitions);
       } catch (error) {
-        console.error();
+        console.error(error);
       }
     }
     fetchAllLigs();
@@ -42,15 +42,8 @@ const League = () => {
         return;
       }
 
-      const filteredLigsByName = ligs.filter((liga) =>
-      liga.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
-    );
-
-    const filteredLigsByCountry = ligs.filter((liga) =>
-      liga.area.name
-        .toLocaleLowerCase()
-        .includes(searchValue.toLocaleLowerCase())
-    );
+    const filteredLigsByName = filterByField(ligs, "name", searchValue);
+    const filteredLigsByCountry = filterByField(ligs, "area", searchValue);
     const allFilteredLigs = [...filteredLigsByCountry, ...filteredLigsByName];
 
     const ids = new Set(allFilteredLigs.map(({ id }) => id));
@@ -71,7 +64,7 @@ const resetSearch = () => {
 
   const allMainLig = () => {
     return ligs.length ? (
-      <Fragment>
+      <>
         <LeagueCentre ligs={getCompetitions()}/>
         <div className="pagination">
          <Pagination  
@@ -79,22 +72,25 @@ const resetSearch = () => {
          onChange={(page) => setPage(page)}
          pageSize={MAX_LEAGUECENTRE_PER_PAGE}
          showSizeChanger={false}
-         total={filteredLigs?.length} />;
+         total={filteredLigs?.length} />
           </div>
          <Footer />
-      </Fragment>
+      </>
     )
     :(<p className = "loading">Loading...</p>
     )
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    searchLigs();
+  }
+  
     return (
     <div className="LeaguePages">
     <Header />
     <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          searchLigs();
-        }}
+        onSubmit={handleSubmit}
       >
   <div className='form'>
 		<input 

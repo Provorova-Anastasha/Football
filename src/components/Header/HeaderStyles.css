@@ -7,6 +7,19 @@
 
 @media (max-width:415px) {
     .header { padding: 5px 100px;}
+    .headerMain { display: flex;
+        gap: 50px;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center}
+    .logo { width: 100px;
+            height: 100px;
+            margin-top: 10px;}
+    .iconlink {
+                width: 60px;
+                height: 60px;
+                  }
+    .text {font-size: 13px;}
 }
 
 .headerMain {
@@ -14,13 +27,6 @@
     gap: 100px;
     flex-wrap: nowrap;
     align-items: center;
-}
-@media (max-width:415px) {
-    .headerMain { display: flex;
-        gap: 50px;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center}
 }
 
 .ligaButton {
@@ -47,38 +53,22 @@
             width: 120px;
             height: 120px;
           }
-    }
-@media (max-width:415px) {
-    .logo { width: 100px;
-    height: 100px;
-    margin-top: 10px;}
+        .iconlink {
+            width: 75px;
+            height: 75px;
+          }
+        .text {
+            font-size: 16px;
+              }
     }
 
-    .iconlink {
+.iconlink {
     width: 90px;
     height: 90px;
-}
-@media (max-width:1367px) {
-    .iconlink {
-        width: 75px;
-        height: 75px;
-      }
-}
-@media  (max-width:415px){
-    .iconlink {
-        width: 60px;
-        height: 60px;
-          }
-}
+        }
+
+
 .text {
     font-size: 18px;
-}
-@media (max-width:1367px) {
-    .text {
-    font-size: 16px;
-      }
-}
-@media  (max-width:415px){ 
-    .text {font-size: 13px;}
 }
 

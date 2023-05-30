@@ -5,12 +5,12 @@ import CardTeams from '../CardTeams';
 const TeamsCentre = ({teams}) => {
       return (
         <div className='teams'>
-          {teams.map(team => (
+          {teams.map(({id,name,crestUrl}) => (
          <CardTeams
-                key={team.id}
-                id={team.id}
-                name={team.name}
-                crestUrl={team.crestUrl}
+                key={id}
+                id={id}
+                name={name}
+                crestUrl={crestUrl}
               />
            ))}
         </div>

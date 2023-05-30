@@ -2,7 +2,7 @@ import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import League from './pages/League';
 import Teams from './pages/Teams';
-import ErrorPage from './pages/ErrorPage';
+import Error from './components/Error'
 import TeamCalendar from './pages/TeamCalendar';
 import CompetitionCalendar from './pages/CompetitionCalendar'
 import './index.css';
@@ -14,7 +14,7 @@ function App() {
        {
           path: '/',
           element: <League />,
-          errorElement: <ErrorPage />
+          errorElement: <Error />
         },
         {
           path: '/teams',

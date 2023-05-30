@@ -6,8 +6,8 @@ import { apiCreate } from '../../api/api';
 import {Pagination} from 'antd';
 import './TeamsStyle.css';
 import Loader from '../../components/Loader/Loader';
-
-const MAX_TEAMSCENTRE_PER_PAGE = 6;
+import {MAX_TEAMSCENTRE_PER_PAGE} from "../../utils/constans"
+import {filterByField} from "../../utils/utils"
 
 const Teams = () => {
   const [teams, setTeams] = useState([]);
@@ -22,7 +22,7 @@ const Teams = () => {
           setTeams(allTeams.data.teams);
           setFilteredTeams(allTeams.data.teams);
           } catch (error) {
-          console.error();
+          console.error(error);
         }
       }
       fetchAllTeams();
@@ -39,9 +39,7 @@ const Teams = () => {
         return;
       }
 
-      const filteredTeamsByName = teams.filter((team) =>
-      team.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
-    );
+    const filteredTeamsByName = filterByField(teams, "name", searchValue);
 
   
   setFilteredTeams(filteredTeamsByName);
@@ -50,14 +48,17 @@ const Teams = () => {
     setFilteredTeams(teams);
     setSearchValue("");
   };
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      searchTeams();
+    }
+
        return (
 <div className="TeamsPages">
       <Header />
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          searchTeams();
-        }}
+        onSubmit={handleSubmit}
       >
     <div className='form'>
       <input 
@@ -78,7 +79,7 @@ const Teams = () => {
       {!filteredTeams.length && teams.length ? (
         <p style={{ color: "white" }}>Ничего не найдено</p>
         ) : teams.length ? (
-        <Fragment>
+        <>
       <TeamsCentre teams={getTeams()}/>
       <div className="pagination">
            <Pagination  
@@ -89,7 +90,7 @@ const Teams = () => {
            total={teams.length} />
             </div>
             <Footer />
-            </Fragment>
+            </>
       )
       :( <Loader />
       )}
