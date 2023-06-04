@@ -1,2 +1,2 @@
-import TeamsCentre from './TeamsCentre';
+import TeamsCentre from "./TeamsCentre";
 export default TeamsCentre;

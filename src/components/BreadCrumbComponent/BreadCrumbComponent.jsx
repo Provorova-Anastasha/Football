@@ -4,7 +4,7 @@ import { Breadcrumb } from "antd";
 import { apiCreate } from "../../api/api";
 import { Link } from "react-router-dom";
 
-import './BreadCrumbStyles.css';
+import "./BreadCrumbStyles.css";
 
 const BreadCrumbComponent = ({ apiEndpoint, title }) => {
   const [nameTeam, setNameTeam] = useState([]);
@@ -21,7 +21,7 @@ const BreadCrumbComponent = ({ apiEndpoint, title }) => {
       }
     }
     fetchMatches();
-  }, [apiEndpoint,id]);
+  }, [apiEndpoint, id]);
 
   return (
     <Breadcrumb
@@ -31,7 +31,7 @@ const BreadCrumbComponent = ({ apiEndpoint, title }) => {
       items={[
         {
           title: (
-            <Link to= {`/${apiEndpoint}`}>
+            <Link to={`/${apiEndpoint}`}>
               <p className="breadcrumbWrapText">{title}</p>
             </Link>
           ),

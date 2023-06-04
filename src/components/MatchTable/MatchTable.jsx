@@ -4,7 +4,7 @@ import { columns } from "./constants";
 import Error403 from "../Error/Error403";
 import Loader from "../Loader/Loader";
 
-import "./MatchTable.css"
+import "./MatchTable.css";
 
 const MatchTable = ({ matches, errorMessages }) => {
   if (errorMessages) {
