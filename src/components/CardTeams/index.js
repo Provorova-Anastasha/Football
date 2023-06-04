@@ -1,2 +1,2 @@
-import CardTeams from './CardTeams';
-export default CardTeams
+import CardTeams from "./CardTeams";
+export default CardTeams;

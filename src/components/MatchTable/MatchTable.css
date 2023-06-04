@@ -9,7 +9,7 @@
 
 .ant-table-cell {
   background: none !important;
-  color:white
+  color: white;
 }
 .ant-table-tbody {
   background-color: #3b7d39;
@@ -19,7 +19,7 @@
   background-color: #126416;
   font-size: 17px;
 }
-.ant-table-wrapper .ant-table-thead >tr>th{
+.ant-table-wrapper .ant-table-thead > tr > th {
   color: white;
 }
 .table {

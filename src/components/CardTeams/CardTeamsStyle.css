@@ -1,45 +1,44 @@
 .Cardteams {
-    width: 300px;
-    height: 150px;
-    text-decoration: none;
-    color: #b0f799;
-    border-radius: 10px;
-    text-align: center;
-    border: 3px solid #b0f799;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    background: #2a9932;
+  width: 300px;
+  height: 150px;
+  text-decoration: none;
+  color: #b0f799;
+  border-radius: 10px;
+  text-align: center;
+  border: 3px solid #b0f799;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  background: #2a9932;
 }
-@media (max-width:1367px) {
-    .Cardteams {
-        width: 260px;
-        height: 140px;
-      }
-}
-@media (max-width:415px) {
-    .Cardteams {
-        width: 220px;
-        height: 120px;
-      }
-    }
-.Cardteams:hover{background-color: #b0f799;}
-.cardTitle {
-    margin-bottom: 20px;
-    font-size: 25px;
-}
-@media (max-width:1367px) {
-    .cardTitle {
+@media (max-width: 1367px) {
+  .Cardteams {
+    width: 260px;
+    height: 140px;
+  }
+  .cardTitle {
     font-size: 20px;
-      }
+  }
 }
-@media (max-width:415px) {
-    .cardTitle {
+@media (max-width: 415px) {
+  .Cardteams {
+    width: 220px;
+    height: 120px;
+  }
+  .cardTitle {
     margin-bottom: 5px;
     font-size: 15px;
-      }
-    }
+  }
+}
+.Cardteams:hover {
+  background-color: #b0f799;
+}
+.cardTitle {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
 .CardTeamsButton {
-    text-decoration: none;
+  text-decoration: none;
 }

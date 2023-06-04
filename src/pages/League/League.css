@@ -1,52 +1,51 @@
 .pagination {
-    display: flex;
-    margin: 40px;
-    justify-content: center;
-    margin-top: 100px;
-    }
-  .ant-pagination {
-      background-color: #2a9932;
-      padding: 5px;
-  }
-  .ant-pagination .ant-pagination-item a {
-    color: #fff;
-  }
-  .ant-pagination .ant-pagination-item a:hover {
-    color: black;
-    }
-  .ant-pagination .ant-pagination-item-active {
-    background-color: rgb(39,90,29);
-    border-color:black;
-     }
-  .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
-    background-color: rgb(39,90,29); 
-    border-color:black;
-  }
-  .loading {
-    color: black;
-  }
-  .search {
-    width: 30%;
-    height: 30px;
-    color: black;
-    background:#c2fdc5;
-    border: 2px solid #016d1a;
-    border-radius: 50px;
-    }
-    .quest {
-      width: 70px;
-      height: 30px;
-      color: #00360d;
-      background:#aef8b2;
-      border: 2px solid #016d1a;
-      border-radius: 50px;
-  }
-  .lose {
-      width: 70px;
-      height: 30px;
-      color: #00360d;
-      background:#aef8b2;
-      border: 2px solid #016d1a;
-      border-radius: 50px;
-  
-  }
+  display: flex;
+  margin: 40px;
+  justify-content: center;
+  margin-top: 100px;
+}
+.ant-pagination {
+  background-color: #2a9932;
+  padding: 5px;
+}
+.ant-pagination .ant-pagination-item a {
+  color: #fff;
+}
+.ant-pagination .ant-pagination-item a:hover {
+  color: black;
+}
+.ant-pagination .ant-pagination-item-active {
+  background-color: rgb(39, 90, 29);
+  border-color: black;
+}
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: rgb(39, 90, 29);
+  border-color: black;
+}
+.loading {
+  color: black;
+}
+.search {
+  width: 30%;
+  height: 30px;
+  color: black;
+  background: #c2fdc5;
+  border: 2px solid #016d1a;
+  border-radius: 50px;
+}
+.quest {
+  width: 70px;
+  height: 30px;
+  color: #00360d;
+  background: #aef8b2;
+  border: 2px solid #016d1a;
+  border-radius: 50px;
+}
+.lose {
+  width: 70px;
+  height: 30px;
+  color: #00360d;
+  background: #aef8b2;
+  border: 2px solid #016d1a;
+  border-radius: 50px;
+}

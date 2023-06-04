@@ -1,84 +1,81 @@
-.header {	padding: 5px 60px;
-    background: #2a9932;
-    color:black;
-    display: flex;
-    flex-direction: column;
+.header {
+  padding: 5px 60px;
+  background: #2a9932;
+  color: black;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (max-width:415px) {
-    .header { padding: 5px 100px;}
+@media (max-width: 415px) {
+  .header {
+    padding: 5px 100px;
+  }
+  .headerMain {
+    display: flex;
+    gap: 50px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+  }
+  .iconlink {
+    width: 60px;
+    height: 60px;
+  }
+  .text {
+    font-size: 13px;
+  }
 }
 
 .headerMain {
-    display: flex;
-    gap: 100px;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-@media (max-width:415px) {
-    .headerMain { display: flex;
-        gap: 50px;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center}
+  display: flex;
+  gap: 100px;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .ligaButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
 }
 .temButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
 }
 .logo {
-    width: 150px;
-    height: 150px;
-    margin-top: 10px;
-    }
-@media (max-width:1367px) {
-        .logo {
-            width: 120px;
-            height: 120px;
-          }
-    }
-@media (max-width:415px) {
-    .logo { width: 100px;
-    height: 100px;
-    margin-top: 10px;}
-    }
-
-    .iconlink {
-    width: 90px;
-    height: 90px;
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
 }
-@media (max-width:1367px) {
-    .iconlink {
-        width: 75px;
-        height: 75px;
-      }
-}
-@media  (max-width:415px){
-    .iconlink {
-        width: 60px;
-        height: 60px;
-          }
-}
-.text {
-    font-size: 18px;
-}
-@media (max-width:1367px) {
-    .text {
+@media (max-width: 1367px) {
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+  .iconlink {
+    width: 75px;
+    height: 75px;
+  }
+  .text {
     font-size: 16px;
-      }
-}
-@media  (max-width:415px){ 
-    .text {font-size: 13px;}
+  }
 }
 
+.iconlink {
+  width: 90px;
+  height: 90px;
+}
+
+.text {
+  font-size: 18px;
+}

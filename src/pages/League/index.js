@@ -1,2 +1,2 @@
 import League from "./League";
-export default League 
+export default League;

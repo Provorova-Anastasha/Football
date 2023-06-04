@@ -1,4 +1,4 @@
-.competitions{
+.competitions {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -7,16 +7,14 @@
   gap: 30px;
   width: 70%;
   margin: auto;
-  
-
 }
-@media (max-width:415px) {
+@media (max-width: 415px) {
   .competitions {
-  display: flex;
-  flex-direction: column;
- gap: 10px
-    }
-      }
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 .loading {
   color: black;
 }

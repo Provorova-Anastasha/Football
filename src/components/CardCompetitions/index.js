@@ -1,2 +1,2 @@
 import CardCompetitions from "./CardCompetitions";
-export default CardCompetitions
+export default CardCompetitions;
